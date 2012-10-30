@@ -8,19 +8,20 @@ public class UDPClient {
     public static void main(String[] args) throws IOException, InterruptedException {
     	boolean running = true;
     	DatagramSocket socket = new DatagramSocket();
-        if (args.length != 1) {
+        if (args.length < 1) {
              System.out.println("Usage: java QuoteClient <hostname>");
+             socket.close();
              return;
         }
         while(running){
 	         // get a datagram socket
 	        
-	        byte[] test = "sdad".getBytes();        
+	        byte[] byteArr = (args[0]+" "+args[1]+" "+args[2]).getBytes();        
 	        
 	        // send request
 	        byte[] buf = new byte[256];
-	        InetAddress address = InetAddress.getByName(args[0]);
-	        DatagramPacket packet = new DatagramPacket(test, test.length, address, 4445);
+	        InetAddress address = InetAddress.getByName("ServerThread"); //this line fails... cant remember what was in the example code.. easy fix though
+	        DatagramPacket packet = new DatagramPacket(byteArr, byteArr.length, address, 4445);
 	        socket.send(packet);
 	     
 	            // get response

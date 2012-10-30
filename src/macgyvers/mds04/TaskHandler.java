@@ -1,5 +1,8 @@
 package macgyvers.mds04;
 import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -17,9 +20,24 @@ public class TaskHandler {
 	private static TaskHandler instance = new TaskHandler();
 	private Queue<Task> notExecuted = new LinkedList<Task>();
 	private HashMap<String, Task> executed = new HashMap<String, Task>();
+	private Cal cal;
+	private CalSerializer ser;
 	
 	private TaskHandler(){
-		
+		ser = new CalSerializer();
+		try {
+			cal = ser.deserialize();
+			for(Task task : cal.tasks){
+				//add tasks to the correct list or map
+				if(!task.status.equals("executed"))
+					notExecuted.add(task);
+				else executed.put(task.id, task);
+			}
+		} catch (FileNotFoundException | JAXBException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println(cal.tasks.size() +" Tasks read from XML file.");
 	}
 	
 	public void submitTask(Task task){
@@ -30,38 +48,7 @@ public class TaskHandler {
 		return instance;
 	}
 	
-	
-	
-	public Task popNotExecuted() {
-		return notExecuted.remove();
-	}
 
-	public boolean isExecuted(String id) {
-		return executed.containsKey(id);
-	}
-	
-	public void putExecuted(Task task){
-		executed.put(task.id, task);
-	}
-	
-	public boolean hasJobs(){
-		return !notExecuted.isEmpty();
-	}
-
-	public static void main(String[] args) {
-		TaskHandler handler = TaskHandler.getInstance();
-		CalSerializer ser = new CalSerializer();
-		try {
-			Cal t = ser.deserialize();
-			for(Task task : t.tasks){
-				System.out.println("Task: "+task);
-			}
-		} catch (FileNotFoundException | JAXBException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
-	
 	public class TaskExecuter extends Thread {
 		TaskHandler handler;
 		public TaskExecuter(){
@@ -69,10 +56,34 @@ public class TaskHandler {
 		}
 		public void start(){
 			while(true){
-				if(handler.hasJobs()){
-					Task task = handler.popNotExecuted();
+				//if there are jobs in the queue
+				if(!handler.notExecuted.isEmpty()){
+					//pop the task from the queue
+					Task task = handler.notExecuted.remove();
+					//if it has conditions, check whether they're fullfilled.
 					if(!task.conditions.isEmpty()){
-						//tjek conditions for hvert osv...
+						for(String condition : task.conditions){
+							//this is where we make use of the separate idNumber. If the conditions are not in executed list.
+							if(!executed.containsKey(condition+"-"+task.idNumber)){
+								handler.submitTask(task); //submit task in the back of the queue and pop another :-)
+								System.out.println("Delaying execution of: " + task.toString());
+								continue;
+							}
+						}
+						//if there are no conditions before execution
+					} else {
+						task.status = "executed";
+						handler.executed.put(task.id, task);
+						//save state
+						Collection<Task> fullList = new ArrayList<Task>();
+						fullList.addAll(notExecuted); fullList.addAll(executed.values());
+						cal.tasks = fullList;
+						try {
+							ser.serialize(cal);
+						} catch (JAXBException | IOException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
 					}
 				}
 					

@@ -4,6 +4,8 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 
+import macgyvers.mds04.xml.Task;
+
 public class UDPServer extends Thread {
 	 
     protected DatagramSocket socket = null;
@@ -12,10 +14,14 @@ public class UDPServer extends Thread {
     
     protected String user = null;
     protected String command = null;
-    protected int id = 0;
+    protected String id = null;
+    protected String idNumber = null;
+    protected String name = null;
+    protected TaskType type = null;
+    private TaskHandler handler = TaskHandler.getInstance();
     
     public UDPServer() throws IOException {
-    	this("QuoteServerThread");
+    	this("ServerThread");
     }
  
     public UDPServer(String name) throws IOException {
@@ -28,7 +34,7 @@ public class UDPServer extends Thread {
             try {
                 byte[] buf = new byte[256];
                 
-                String returnMessage = "";
+                String returnMessage = null;
                 // receive request
                 DatagramPacket packet = new DatagramPacket(buf, buf.length);
                 socket.receive(packet);
@@ -40,20 +46,29 @@ public class UDPServer extends Thread {
                 
                 String[] inputs = input.split(" ");
                 
+               
                 if(inputs.length < 3)
                 	returnMessage = "Usage: user command id";
                 else {
                 	user = inputs[0];
-                	command = inputs[1];
-                	try{
-                		id = Integer.parseInt(input);
-                	}catch(NumberFormatException nfe){
-                		returnMessage = "Usage: user command (int)id";
+                	command = inputs[1]; //the command is currently not used, but can be implemented to support different commands.
+                	id = inputs[2];
+                	//splitting the ID into type and id-number
+                	String[] strArr = inputs[2].split("-");
+                	if(strArr.length != 2) returnMessage = "please enter a valid assignment type and id, eg. handin-01";
+                	else {
+                		idNumber = strArr[1].trim();
+                		type = TaskType.getType(strArr[0].trim().toLowerCase());
                 	}
                 }
-                if(returnMessage == ""){
-	               // String dString =TaskHandler.handle(user,command,id);
-	               
+                
+                if(returnMessage == null){
+	               // creates a new job and adds the relevant dependencies from the enum + timestamp etc..
+	               Task task = new Task(id, new Date(), idNumber);
+	               // adding the enum conditions
+	               task.conditions = type.conditions;
+	               //submit it for execution
+                	handler.submitTask(task);
                 }
                 buf = returnMessage.getBytes();
 

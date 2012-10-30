@@ -5,6 +5,7 @@ package macgyvers.mds04.xml;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Date;
 
 import javax.xml.bind.annotation.*;
 /**
@@ -16,6 +17,9 @@ public class Task implements Serializable {
 	
 	@XmlAttribute
 	public String id;
+	
+	// not saved to xml
+	public String idNumber;
 	
 	@XmlAttribute
 	public String name;
@@ -43,13 +47,24 @@ public class Task implements Serializable {
 	public ArrayList<String> responses;	
 
     public Task(){}
-
+    //this constructor is for creating new entries
     public Task(String id, String name, String date, String status){
         this.attendants = new ArrayList<String>();
         this.id = id;
         this.name = name;
         this.date = date;
         this.status = status;
+    }
+    //overload this constructor is for changing state of existing entries
+    public Task(String id, Date date, String idNumber){
+    	this.date = date.toString();
+    	this.id = id;
+    	this.idNumber = idNumber;
+    }
+    
+    @Override
+    public String toString(){
+    	return "Job:	Id:"+id+ " Date: " +date+" Status: "+status;
     }
 
 }
