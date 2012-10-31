@@ -14,16 +14,23 @@ import macgyvers.mds04.xml.CalSerializer;
 import macgyvers.mds04.xml.Task;
 import macgyvers.mds04.xml.TaskList;
 import macgyvers.mds04.xml.TaskSerializer;
-
+/**
+ * This class holds the queues with executed, and nonexecuted Tasks.
+ * New Tasks can be submitted and waiting jobs can be popped from the queues.
+ * The tasks are executed by the inner class taskexecuter (see below)
+ * @author Morten
+ *
+ */
 public class TaskHandler {
 	
-	private static TaskHandler instance = new TaskHandler();
+	public static TaskHandler instance = new TaskHandler();
 	private Queue<Task> notExecuted = new LinkedList<Task>();
 	private HashMap<String, Task> executed = new HashMap<String, Task>();
 	private Cal cal;
 	private CalSerializer ser;
 	
 	private TaskHandler(){
+		//unserialize the calendar of events
 		ser = new CalSerializer();
 		try {
 			cal = ser.deserialize();
@@ -39,33 +46,53 @@ public class TaskHandler {
 		}
 		System.out.println(cal.tasks.size() +" Tasks read from XML file.");
 	}
-	
+	/**
+	 * adds a task to the notExecuted queue
+	 * @param task
+	 */
 	public void submitTask(Task task){
 		notExecuted.offer(task);
 	}
-	
+	/**
+	 * singleton method
+	 * @return
+	 */
 	public static TaskHandler getInstance(){
 		return instance;
+	}
+	/**
+	 * Class that executes all jobs. This runs in a separate thread so it wont block the TaskHandler thread.
+	 * This makes it possible to continuously add jobs via the submit jobs method while executing jobs in the loop. 
+	 */
+	public void startExecuteService(){
+		Thread t = new TaskExecuter();
+		t.setDaemon(true);
+		t.start();
 	}
 	
 
 	public class TaskExecuter extends Thread {
-		TaskHandler handler;
+		
+		
 		public TaskExecuter(){
-			handler = TaskHandler.getInstance();
+			super();	
 		}
+		
+		@Override
 		public void start(){
+			
+		
 			while(true){
 				//if there are jobs in the queue
-				if(!handler.notExecuted.isEmpty()){
+				if(!notExecuted.isEmpty()){
 					//pop the task from the queue
-					Task task = handler.notExecuted.remove();
+					Task task = notExecuted.remove();
 					//if it has conditions, check whether they're fullfilled.
 					if(!task.conditions.isEmpty()){
 						for(String condition : task.conditions){
 							//this is where we make use of the separate idNumber. If the conditions are not in executed list.
 							if(!executed.containsKey(condition+"-"+task.idNumber)){
-								handler.submitTask(task); //submit task in the back of the queue and pop another :-)
+								submitTask(task); //submit task in the back of the queue and pop another :-)
 								System.out.println("Delaying execution of: " + task.toString());
 								continue;
 							}
@@ -73,7 +100,7 @@ public class TaskHandler {
 						//if there are no conditions before execution
 					} else {
 						task.status = "executed";
-						handler.executed.put(task.id, task);
+						executed.put(task.id, task);
 						//save state
 						Collection<Task> fullList = new ArrayList<Task>();
 						fullList.addAll(notExecuted); fullList.addAll(executed.values());
@@ -85,6 +112,12 @@ public class TaskHandler {
 							e.printStackTrace();
 						}
 					}
+				}
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
 				}
 					
 			}

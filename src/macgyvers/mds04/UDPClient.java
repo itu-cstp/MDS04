@@ -7,9 +7,10 @@ import java.util.*;
 public class UDPClient {
     public static void main(String[] args) throws IOException, InterruptedException {
     	boolean running = true;
+    	//udp protocol over a socket.
     	DatagramSocket socket = new DatagramSocket();
         if (args.length < 1) {
-             System.out.println("Usage: java QuoteClient <hostname>");
+             System.out.println("Usage: username command id");
              socket.close();
              return;
         }
@@ -20,7 +21,7 @@ public class UDPClient {
 	        
 	        // send request
 	        byte[] buf = new byte[256];
-	        InetAddress address = InetAddress.getByName("ServerThread"); //this line fails... cant remember what was in the example code.. easy fix though
+	        InetAddress address = InetAddress.getByName("localhost");
 	        DatagramPacket packet = new DatagramPacket(byteArr, byteArr.length, address, 4445);
 	        socket.send(packet);
 	     
