@@ -34,9 +34,10 @@ public class TaskHandler {
 		ser = new CalSerializer();
 		try {
 			cal = ser.deserialize();
+            System.out.println(cal);
 			for(Task task : cal.tasks){
 				//add tasks to the correct list or map
-				if(!task.status.equals("executed"))
+				if(task.status != null && !task.status.equals("executed"))
 					notExecuted.add(task);
 				else executed.put(task.id, task);
 			}

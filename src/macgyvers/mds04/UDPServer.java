@@ -55,14 +55,14 @@ public class UDPServer extends Thread {
                 String[] inputs = input.split(" ");
                 
                //if all information is not entered from the client
-                if(inputs.length < 3)
-                	returnMessage = "Usage: user command id";
+                if(inputs.length < 2)
+                	returnMessage = "Usage: user command-id";
                 else {
                 	user = inputs[0];
-                	command = inputs[1]; //the command is currently not used, but can be implemented to support different commands.
-                	id = inputs[2]; //id stored in format "tasktype-idnumber", as in "handin-01"
+                	//command = inputs[1]; //the command is currently not used, but can be implemented to support different commands.
+                	id = inputs[1]; //id stored in format "tasktype-idnumber", as in "handin-01"
                 	//splitting the ID into type and id-number
-                	String[] strArr = inputs[2].split("-");
+                	String[] strArr = id.split("-");
                 	//this line checks whether the task id is entered correctly
                 	if(strArr.length != 2) returnMessage = "please enter a valid assignment type and id, eg. handin-01";
                 	else {
@@ -74,6 +74,7 @@ public class UDPServer extends Thread {
                 //if there are no errors so far (returnMessage not altered)
                 if(returnMessage == ""){
                 	System.out.println("Task Received, Id: "+ id);
+                    returnMessage = "Task received, Id: "+id;
 	               // creates a new job and adds the relevant dependencies from the enum + timestamp etc..
 	               Task task = new Task(id, new Date(), idNumber);
 	               // adding the enum conditions
