@@ -9,29 +9,36 @@ public class UDPClient {
     	boolean running = true;
     	//udp protocol over a socket.
     	DatagramSocket socket = new DatagramSocket();
-        if (args.length < 1) {
-             System.out.println("Usage: username command-id");
-             socket.close();
-             return;
-        }
+
          // get a datagram socket
+        while(running){
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        byte[] byteArr = (args[0]+" "+args[1]).getBytes();
+            String line = br.readLine();
+            String[] inputs = line.split(" ");
 
-        // send request
-        byte[] buf = new byte[256];
-        InetAddress address = InetAddress.getByName("localhost");
-        DatagramPacket packet = new DatagramPacket(byteArr, byteArr.length, address, 4445);
-        socket.send(packet);
+            if (inputs.length < 1) {
+                System.out.println("Usage: username command-id");
+                socket.close();
+                return;
+            }
 
-        // get response
-        packet = new DatagramPacket(buf, buf.length);
-        socket.receive(packet);
+            byte[] byteArr = (inputs[0]+" "+inputs[1]).getBytes();
 
-        // display response
-        String received = new String(packet.getData(), 0, packet.getLength());
-        System.out.println("From server: " + received);
+            // send request
+            byte[] buf = new byte[256];
+            InetAddress address = InetAddress.getByName("localhost");
+            DatagramPacket packet = new DatagramPacket(byteArr, byteArr.length, address, 4445);
+            socket.send(packet);
 
-        socket.close();
+            // get response
+            packet = new DatagramPacket(buf, buf.length);
+            socket.receive(packet);
+
+            // display response
+            String received = new String(packet.getData(), 0, packet.getLength());
+            System.out.println("From server: " + received);
+        }
+     //   socket.close();
     }
 }

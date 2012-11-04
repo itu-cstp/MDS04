@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e032d31-ac23-4fae-9e87-de27f3753ecb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/macgyvers/mds04/ServerRunner.java" afterPath="$PROJECT_DIR$/src/macgyvers/mds04/ServerRunner.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/macgyvers/mds04/TaskHandler.java" afterPath="$PROJECT_DIR$/src/macgyvers/mds04/TaskHandler.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ressources/task-manager-revised.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/macgyvers/mds04/UDPClient.java" afterPath="$PROJECT_DIR$/src/macgyvers/mds04/UDPClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/macgyvers/mds04/UDPServer.java" afterPath="$PROJECT_DIR$/src/macgyvers/mds04/UDPServer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/macgyvers/mds04/xml/CalSerializer.java" afterPath="$PROJECT_DIR$/src/macgyvers/mds04/xml/CalSerializer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ressources/task-manager-revised.xml" afterPath="$PROJECT_DIR$/src/ressources/task-manager-revised.xml" />
     </list>
     <ignored path="MDS04.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -65,10 +63,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="UDPClient.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="UDPClient.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/macgyvers/mds04/UDPClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="0" selection-start="1082" selection-end="1082" vertical-scroll-proportion="0.0">
+            <state line="41" column="7" selection-start="1371" selection-end="1371" vertical-scroll-proportion="0.8815789">
               <folding />
             </state>
           </provider>
@@ -92,19 +90,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TaskHandler.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="TaskHandler.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/macgyvers/mds04/TaskHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="16" selection-start="1609" selection-end="1609" vertical-scroll-proportion="0.6868421">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CalSerializer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/macgyvers/mds04/xml/CalSerializer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="40" selection-start="379" selection-end="379" vertical-scroll-proportion="0.0">
+            <state line="26" column="41" selection-start="823" selection-end="823" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -133,10 +122,10 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/src/macgyvers/mds04/ServerRunner.java" />
-        <option value="$PROJECT_DIR$/src/macgyvers/mds04/xml/CalSerializer.java" />
-        <option value="$PROJECT_DIR$/src/macgyvers/mds04/TaskHandler.java" />
-        <option value="$PROJECT_DIR$/src/macgyvers/mds04/UDPClient.java" />
         <option value="$PROJECT_DIR$/src/macgyvers/mds04/UDPServer.java" />
+        <option value="$PROJECT_DIR$/src/macgyvers/mds04/TaskHandler.java" />
+        <option value="$PROJECT_DIR$/src/macgyvers/mds04/xml/CalSerializer.java" />
+        <option value="$PROJECT_DIR$/src/macgyvers/mds04/UDPClient.java" />
       </list>
     </option>
   </component>
@@ -196,24 +185,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="MDS04" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MDS04" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MDS04" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ressources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -513,27 +484,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ressources/task-manager-revised.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/macgyvers/mds04/xml/CalSerializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="40" selection-start="379" selection-end="379" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/macgyvers/mds04/UDPClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="1082" selection-end="1082" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/macgyvers/mds04/UDPServer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="82" column="34" selection-start="3533" selection-end="3533" vertical-scroll-proportion="0.0">
@@ -548,9 +498,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/macgyvers/mds04/xml/CalSerializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="109" selection-start="448" selection-end="448" vertical-scroll-proportion="0.43421054">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/macgyvers/mds04/TaskHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="16" selection-start="1609" selection-end="1609" vertical-scroll-proportion="0.6868421">
+        <state line="26" column="41" selection-start="823" selection-end="823" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/macgyvers/mds04/UDPClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="7" selection-start="1371" selection-end="1371" vertical-scroll-proportion="0.8815789">
           <folding />
         </state>
       </provider>

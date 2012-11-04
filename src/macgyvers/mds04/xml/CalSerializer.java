@@ -18,7 +18,7 @@ import javax.xml.bind.JAXBException;
  */
 public class CalSerializer {
 
-	private final String SAVING_PATH = "src/ressources/task-manager-revised.xml";
+	private final String SAVING_PATH = "/home/csp/projects/ITU/3.semester/BMDS/MDS04/task-manager-revised.xml";
 
 	public Cal deserialize() throws JAXBException, FileNotFoundException {
 		Cal cal = null;
