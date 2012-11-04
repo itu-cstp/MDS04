@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7e032d31-ac23-4fae-9e87-de27f3753ecb" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/ressources/task-manager-revised.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/macgyvers/mds04/UDPClient.java" afterPath="$PROJECT_DIR$/src/macgyvers/mds04/UDPClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/macgyvers/mds04/UDPServer.java" afterPath="$PROJECT_DIR$/src/macgyvers/mds04/UDPServer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-manager-revised.xml" afterPath="$PROJECT_DIR$/task-manager-revised.xml" />
     </list>
     <ignored path="MDS04.iws" />
     <ignored path=".idea/workspace.xml" />
