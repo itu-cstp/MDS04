@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="7e032d31-ac23-4fae-9e87-de27f3753ecb" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/ressources/task-manager-revised.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/macgyvers/mds04/UDPClient.java" afterPath="$PROJECT_DIR$/src/macgyvers/mds04/UDPClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/macgyvers/mds04/xml/CalSerializer.java" afterPath="$PROJECT_DIR$/src/macgyvers/mds04/xml/CalSerializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/macgyvers/mds04/UDPServer.java" afterPath="$PROJECT_DIR$/src/macgyvers/mds04/UDPServer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-manager-revised.xml" afterPath="$PROJECT_DIR$/task-manager-revised.xml" />
     </list>
     <ignored path="MDS04.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -66,7 +66,7 @@
       <file leaf-file-name="UDPClient.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/macgyvers/mds04/UDPClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="7" selection-start="1371" selection-end="1371" vertical-scroll-proportion="0.8815789">
+            <state line="24" column="66" selection-start="752" selection-end="752" vertical-scroll-proportion="0.6447368">
               <folding />
             </state>
           </provider>
@@ -75,7 +75,7 @@
       <file leaf-file-name="UDPServer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/macgyvers/mds04/UDPServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="82" column="34" selection-start="3533" selection-end="3533" vertical-scroll-proportion="0.0">
+            <state line="63" column="0" selection-start="2332" selection-end="2332" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -122,9 +122,9 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/src/macgyvers/mds04/ServerRunner.java" />
-        <option value="$PROJECT_DIR$/src/macgyvers/mds04/UDPServer.java" />
         <option value="$PROJECT_DIR$/src/macgyvers/mds04/TaskHandler.java" />
         <option value="$PROJECT_DIR$/src/macgyvers/mds04/xml/CalSerializer.java" />
+        <option value="$PROJECT_DIR$/src/macgyvers/mds04/UDPServer.java" />
         <option value="$PROJECT_DIR$/src/macgyvers/mds04/UDPClient.java" />
       </list>
     </option>
@@ -394,7 +394,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="18" width="1600" height="669" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -410,7 +410,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.249354" sideWeight="0.74223036" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25776964" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25776964" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -484,13 +484,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/macgyvers/mds04/UDPServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="34" selection-start="3533" selection-end="3533" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/macgyvers/mds04/ServerRunner.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="36" selection-start="458" selection-end="458" vertical-scroll-proportion="0.0">
@@ -512,9 +505,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/task-manager-revised.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="45" selection-start="713" selection-end="713" vertical-scroll-proportion="0.20435968">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/macgyvers/mds04/UDPServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="0" selection-start="2332" selection-end="2332" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/macgyvers/mds04/UDPClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="7" selection-start="1371" selection-end="1371" vertical-scroll-proportion="0.8815789">
+        <state line="24" column="66" selection-start="752" selection-end="752" vertical-scroll-proportion="0.6447368">
           <folding />
         </state>
       </provider>

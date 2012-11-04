@@ -10,7 +10,6 @@ public class UDPClient {
     	//udp protocol over a socket.
     	DatagramSocket socket = new DatagramSocket();
 
-         // get a datagram socket
         while(running){
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
@@ -23,7 +22,7 @@ public class UDPClient {
                 return;
             }
 
-            byte[] byteArr = (inputs[0]+" "+inputs[1]).getBytes();
+            byte[] byteArr = (inputs[0]+" "+inputs[1]+" "+inputs[2]).getBytes();
 
             // send request
             byte[] buf = new byte[256];

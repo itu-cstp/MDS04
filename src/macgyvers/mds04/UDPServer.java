@@ -48,19 +48,20 @@ public class UDPServer extends Thread {
                 socket.receive(packet);
                 // if no data is received
                 if (packet.getData() == null)
-                    returnMessage = "Usage: user command id";
+                    returnMessage = "Usage: user command-id";
                 // new string created from input
                 String input = new String(packet.getData(), 0, packet.getLength());
                 // splitting the input string to isolate commands
                 String[] inputs = input.split(" ");
-                
+                for(String ino : inputs)
+                        System.out.println(ino);
                //if all information is not entered from the client
                 if(inputs.length < 2)
-                	returnMessage = "Usage: user command-id";
+                	returnMessage = "Usage: user command id";
                 else {
                 	user = inputs[0];
-                	//command = inputs[1]; //the command is currently not used, but can be implemented to support different commands.
-                	id = inputs[1]; //id stored in format "tasktype-idnumber", as in "handin-01"
+                	command = inputs[1]; //the command is currently not used, but can be implemented to support different commands.
+                	id = inputs[2]; //id stored in format "tasktype-idnumber", as in "handin-01"
                 	//splitting the ID into type and id-number
                 	String[] strArr = id.split("-");
                 	//this line checks whether the task id is entered correctly
