@@ -3,13 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7e032d31-ac23-4fae-9e87-de27f3753ecb" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/ressources/task-manager-revised.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/macgyvers/mds04/TaskHandler.java" afterPath="$PROJECT_DIR$/src/macgyvers/mds04/TaskHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/macgyvers/mds04/UDPClient.java" afterPath="$PROJECT_DIR$/src/macgyvers/mds04/UDPClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/macgyvers/mds04/UDPServer.java" afterPath="$PROJECT_DIR$/src/macgyvers/mds04/UDPServer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/macgyvers/mds04/xml/CalSerializer.java" afterPath="$PROJECT_DIR$/src/macgyvers/mds04/xml/CalSerializer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/macgyvers/mds04/xml/Task.java" afterPath="$PROJECT_DIR$/src/macgyvers/mds04/xml/Task.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-manager-revised.xml" afterPath="$PROJECT_DIR$/task-manager-revised.xml" />
     </list>
     <ignored path="MDS04.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -97,7 +90,7 @@
       <file leaf-file-name="TaskHandler.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/macgyvers/mds04/TaskHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="89" column="86" selection-start="2494" selection-end="2494" vertical-scroll-proportion="0.7064935">
+            <state line="89" column="30" selection-start="2438" selection-end="2438" vertical-scroll-proportion="0.7064935">
               <folding>
                 <element signature="e#757#765#0" expanded="true" />
                 <element signature="e#841#855#0" expanded="true" />
@@ -611,7 +604,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/macgyvers/mds04/TaskHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="86" selection-start="2494" selection-end="2494" vertical-scroll-proportion="0.7064935">
+        <state line="89" column="30" selection-start="2438" selection-end="2438" vertical-scroll-proportion="0.7064935">
           <folding>
             <element signature="e#757#765#0" expanded="true" />
             <element signature="e#841#855#0" expanded="true" />
