@@ -22,18 +22,20 @@ import macgyvers.mds04.xml.Task;
  */
 public class TaskHandler {
 	
+
 	public static TaskHandler instance = new TaskHandler();
 	private Queue<String> notExecuted = new LinkedList<String>(); // Pending changes
 	private HashMap<String, Task> taskList = new HashMap<String, Task>();
 	private Cal cal;
 	private CalSerializer ser;
-	
+
 	private TaskHandler(){
 		//unserialize the calendar of events
 		ser = new CalSerializer();
 		try {
 			cal = ser.deserialize();
-            System.out.println(cal);
+
+
 			for(Task task : cal.tasks){
 				//add tasks to the map of tasks
 				 taskList.put(task.id, task);
@@ -68,10 +70,23 @@ public class TaskHandler {
 		t.start();
 	}
 	
+	private synchronized void executeTask(Task task){
+		task.status = "executed";
+		
+		taskList.put(task.id, task);
+		//save state
+		cal.tasks = taskList.values();
+		try {
+			ser.serialize(cal);
+		} catch (JAXBException | IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	
+	}
+	
 
 	public class TaskExecuter extends Thread {
-		
-		
+				
 		public TaskExecuter(){
 			super();	
 		}
@@ -86,30 +101,25 @@ public class TaskHandler {
 					//pop the task from the queue
                     Task task = taskList.get(notExecuted.remove());
 					//if it has conditions, check whether they're fullfilled.
-                    System.out.println(task.conditions+" "+task.conditions.size());
-					if(!task.conditions.isEmpty() || !task.conditions.get(0).equals(" ")){ // Hack
-						for(String condition : task.conditions){
-							//this is where we make use of the separate idNumber. If the conditions are not in taskList list.
-							Task key = taskList.get(condition+"-"+task.idNumber);
+                    //System.out.println(task.conditions+" "+task.conditions.size()+" "+task.conditions.get(0).equals(""));
+                    
+                    if(!task.conditions.isEmpty() && !task.conditions.get(0).equalsIgnoreCase("")){ // Hack
+                    	String[] taskConditions = task.conditions.get(0).split(", "); // Our serialization tool can't handle strings, we fix it by manually splitting
+                    	for(String condition : taskConditions){
+							Task key = taskList.get(condition);
+							System.out.println(condition+" "+key);
                             if(key == null || key.status.equals("not-executed")){
                                 submitTask(task.id); //submit task in the back of the queue and pop another :-)
                                 System.out.println("Postponing "+task.id);
 								continue;
+							}else{
+								executeTask(task);
 							}
+								
 						}
 						//if there are no conditions before execution
 					} else {
-						task.status = "executed";
-                        System.out.println("Executing "+task.id);
-						taskList.put(task.id, task);
-						//save state
-						cal.tasks = taskList.values();
-						try {
-							ser.serialize(cal);
-						} catch (JAXBException | IOException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
+						executeTask(task);
 					}
 				}
 				try {
