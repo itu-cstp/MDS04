@@ -16,8 +16,8 @@ public class UDPClient {
             String line = br.readLine();
             String[] inputs = line.split(" ");
 
-            if (inputs.length < 1) {
-                System.out.println("Usage: username command-id");
+            if (inputs.length < 2) {
+                System.out.println("Usage: username command id");
                 socket.close();
                 return;
             }

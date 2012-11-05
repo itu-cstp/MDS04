@@ -74,14 +74,16 @@ public class UDPServer extends Thread {
                 }
                 //if there are no errors so far (returnMessage not altered)
                 if(returnMessage == ""){
-                	System.out.println("Task Received, Id: "+ id);
                     returnMessage = "Task received, Id: "+id;
-	               // creates a new job and adds the relevant dependencies from the enum + timestamp etc..
-	               Task task = new Task(id, new Date(), idNumber);
+
+	               // finds the relevant task and adds the relevant dependencies from the enum + timestamp etc..
+	               //EDIT: should not make new entry in xml, but change existing.
+	               //Task task = new Task(id, new Date(), idNumber);
+
 	               // adding the enum conditions
-	               task.conditions = type.conditions;
+	               //task.conditions = type.conditions;
 	               //submit it for execution
-                	handler.submitTask(task);
+                   handler.submitTask(id);
                 }
                 buf = returnMessage.getBytes();
 

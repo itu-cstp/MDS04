@@ -3,6 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="7e032d31-ac23-4fae-9e87-de27f3753ecb" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/ressources/task-manager-revised.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/macgyvers/mds04/TaskHandler.java" afterPath="$PROJECT_DIR$/src/macgyvers/mds04/TaskHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/macgyvers/mds04/UDPClient.java" afterPath="$PROJECT_DIR$/src/macgyvers/mds04/UDPClient.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/macgyvers/mds04/UDPServer.java" afterPath="$PROJECT_DIR$/src/macgyvers/mds04/UDPServer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/macgyvers/mds04/xml/CalSerializer.java" afterPath="$PROJECT_DIR$/src/macgyvers/mds04/xml/CalSerializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/macgyvers/mds04/xml/Task.java" afterPath="$PROJECT_DIR$/src/macgyvers/mds04/xml/Task.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-manager-revised.xml" afterPath="$PROJECT_DIR$/task-manager-revised.xml" />
     </list>
     <ignored path="MDS04.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -60,10 +67,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="UDPClient.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="UDPClient.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/macgyvers/mds04/UDPClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="66" selection-start="752" selection-end="752" vertical-scroll-proportion="0.6447368">
+            <state line="18" column="33" selection-start="545" selection-end="545" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -72,7 +79,7 @@
       <file leaf-file-name="UDPServer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/macgyvers/mds04/UDPServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="0" selection-start="2332" selection-end="2332" vertical-scroll-proportion="0.0">
+            <state line="85" column="42" selection-start="3642" selection-end="3642" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -87,19 +94,60 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TaskHandler.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="TaskHandler.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/macgyvers/mds04/TaskHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="41" selection-start="823" selection-end="823" vertical-scroll-proportion="0.0">
+            <state line="89" column="86" selection-start="2494" selection-end="2494" vertical-scroll-proportion="0.7064935">
+              <folding>
+                <element signature="e#757#765#0" expanded="true" />
+                <element signature="e#841#855#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="task-manager-revised.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/task-manager-revised.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="8" selection-start="1689" selection-end="1689" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TaskType.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/macgyvers/mds04/TaskType.java">
+      <file leaf-file-name="CalSerializer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/macgyvers/mds04/xml/CalSerializer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="5" selection-start="277" selection-end="277" vertical-scroll-proportion="0.0">
+            <state line="20" column="40" selection-start="379" selection-end="379" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TaskSerializer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/macgyvers/mds04/xml/TaskSerializer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="13" selection-start="289" selection-end="289" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TaskList.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/macgyvers/mds04/xml/TaskList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="31" selection-start="361" selection-end="361" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#452#458#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Task.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/macgyvers/mds04/xml/Task.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="42" column="73" selection-start="714" selection-end="714" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -119,17 +167,19 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/src/macgyvers/mds04/ServerRunner.java" />
-        <option value="$PROJECT_DIR$/src/macgyvers/mds04/TaskHandler.java" />
+        <option value="$PROJECT_DIR$/src/macgyvers/mds04/UDPClient.java" />
         <option value="$PROJECT_DIR$/src/macgyvers/mds04/xml/CalSerializer.java" />
         <option value="$PROJECT_DIR$/src/macgyvers/mds04/UDPServer.java" />
-        <option value="$PROJECT_DIR$/src/macgyvers/mds04/UDPClient.java" />
+        <option value="$PROJECT_DIR$/src/macgyvers/mds04/xml/Task.java" />
+        <option value="$PROJECT_DIR$/task-manager-revised.xml" />
+        <option value="$PROJECT_DIR$/src/macgyvers/mds04/TaskHandler.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="18" />
-    <option name="width" value="1600" />
-    <option name="height" value="669" />
+    <option name="width" value="800" />
+    <option name="height" value="863" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -142,7 +192,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
-    <option name="STATE" value="2" />
+    <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
@@ -157,16 +207,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -203,23 +243,55 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MDS04" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MDS04" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mds04" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xml" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="project.structure.last.edited" value="Project" />
-    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="MemberChooser.sorted" value="false" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="recentsLimit" value="5" />
+    <property name="MemberChooser.sorted" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
-    <property name="GoToClass.includeLibraries" value="false" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="dynamic.classpath" value="false" />
+    <property name="GoToClass.includeLibraries" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RunManager" selected="Application.Client">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -242,6 +314,24 @@
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
@@ -270,24 +360,6 @@
       <envs />
       <properties />
       <listeners />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -390,27 +462,27 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="18" width="1600" height="669" extended-state="0" />
-    <editor active="false" />
+    <frame x="0" y="18" width="800" height="863" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928476" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.249354" sideWeight="0.74223036" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25776964" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.51604277" sideWeight="0.7422402" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25775978" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -474,52 +546,76 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/macgyvers/mds04/TaskType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="5" selection-start="277" selection-end="277" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/macgyvers/mds04/ServerRunner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="36" selection-start="458" selection-end="458" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="10" column="36" selection-start="458" selection-end="458" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/macgyvers/mds04/xml/TaskList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="31" selection-start="361" selection-end="361" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#452#458#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/macgyvers/mds04/xml/CalSerializer.java">
+    <entry file="file://$PROJECT_DIR$/src/macgyvers/mds04/TaskType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="109" selection-start="448" selection-end="448" vertical-scroll-proportion="0.43421054">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/macgyvers/mds04/TaskHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="41" selection-start="823" selection-end="823" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task-manager-revised.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="45" selection-start="713" selection-end="713" vertical-scroll-proportion="0.20435968">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/macgyvers/mds04/UDPServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="0" selection-start="2332" selection-end="2332" vertical-scroll-proportion="0.0">
+        <state line="20" column="37" selection-start="668" selection-end="668" vertical-scroll-proportion="0.40528634">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/macgyvers/mds04/UDPClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="66" selection-start="752" selection-end="752" vertical-scroll-proportion="0.6447368">
+        <state line="18" column="33" selection-start="545" selection-end="545" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/macgyvers/mds04/xml/CalSerializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="40" selection-start="379" selection-end="379" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/macgyvers/mds04/xml/Task.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="73" selection-start="714" selection-end="714" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/macgyvers/mds04/xml/TaskSerializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="13" selection-start="289" selection-end="289" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/macgyvers/mds04/UDPServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="85" column="42" selection-start="3642" selection-end="3642" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task-manager-revised.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="8" selection-start="1689" selection-end="1689" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/macgyvers/mds04/TaskHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="89" column="86" selection-start="2494" selection-end="2494" vertical-scroll-proportion="0.7064935">
+          <folding>
+            <element signature="e#757#765#0" expanded="true" />
+            <element signature="e#841#855#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

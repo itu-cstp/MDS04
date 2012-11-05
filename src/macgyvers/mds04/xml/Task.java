@@ -41,7 +41,7 @@ public class Task implements Serializable {
 	public String description;
 	
 	@XmlElement(name = "conditions")
-	public ArrayList<String> conditions;
+	public ArrayList<String> conditions = new ArrayList<>();
 	
 	@XmlElement(name = "responses")
 	public ArrayList<String> responses;	
@@ -64,7 +64,9 @@ public class Task implements Serializable {
     
     @Override
     public String toString(){
-    	return "Job:	Id:"+id+ " Date: " +date+" Status: "+status;
+
+        return "Job:	Id:"+id+ " Date: " +date+" Status: "+status+" conditions: "+conditions;
+
     }
 
 }

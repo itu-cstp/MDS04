@@ -12,20 +12,19 @@ import javax.xml.bind.JAXBException;
 import macgyvers.mds04.xml.Cal;
 import macgyvers.mds04.xml.CalSerializer;
 import macgyvers.mds04.xml.Task;
-import macgyvers.mds04.xml.TaskList;
-import macgyvers.mds04.xml.TaskSerializer;
+
 /**
- * This class holds the queues with executed, and nonexecuted Tasks.
+ * This class holds the queues with taskList, and nonexecuted Tasks.
  * New Tasks can be submitted and waiting jobs can be popped from the queues.
- * The tasks are executed by the inner class taskexecuter (see below)
+ * The tasks are taskList by the inner class taskexecuter (see below)
  * @author Morten
  *
  */
 public class TaskHandler {
 	
 	public static TaskHandler instance = new TaskHandler();
-	private Queue<Task> notExecuted = new LinkedList<Task>();
-	private HashMap<String, Task> executed = new HashMap<String, Task>();
+	private Queue<String> notExecuted = new LinkedList<String>(); // Pending changes
+	private HashMap<String, Task> taskList = new HashMap<String, Task>();
 	private Cal cal;
 	private CalSerializer ser;
 	
@@ -36,10 +35,8 @@ public class TaskHandler {
 			cal = ser.deserialize();
             System.out.println(cal);
 			for(Task task : cal.tasks){
-				//add tasks to the correct list or map
-				if(task.status != null && !task.status.equals("executed"))
-					notExecuted.add(task);
-				else executed.put(task.id, task);
+				//add tasks to the map of tasks
+				 taskList.put(task.id, task);
 			}
 		} catch (FileNotFoundException | JAXBException e) {
 			// TODO Auto-generated catch block
@@ -49,10 +46,10 @@ public class TaskHandler {
 	}
 	/**
 	 * adds a task to the notExecuted queue
-	 * @param task
+	 * @param
 	 */
-	public void submitTask(Task task){
-		notExecuted.offer(task);
+	public void submitTask(String taskid){
+		notExecuted.offer(taskid);
 	}
 	/**
 	 * singleton method
@@ -87,25 +84,26 @@ public class TaskHandler {
 				//if there are jobs in the queue
 				if(!notExecuted.isEmpty()){
 					//pop the task from the queue
-					Task task = notExecuted.remove();
+                    Task task = taskList.get(notExecuted.remove());
 					//if it has conditions, check whether they're fullfilled.
-					if(!task.conditions.isEmpty()){
+                    System.out.println(task.conditions+" "+task.conditions.size());
+					if(!task.conditions.isEmpty() || !task.conditions.get(0).equals(" ")){ // Hack
 						for(String condition : task.conditions){
-							//this is where we make use of the separate idNumber. If the conditions are not in executed list.
-							if(!executed.containsKey(condition+"-"+task.idNumber)){
-								submitTask(task); //submit task in the back of the queue and pop another :-)
-								System.out.println("Delaying execution of: " + task.toString());
+							//this is where we make use of the separate idNumber. If the conditions are not in taskList list.
+							Task key = taskList.get(condition+"-"+task.idNumber);
+                            if(key == null || key.status.equals("not-executed")){
+                                submitTask(task.id); //submit task in the back of the queue and pop another :-)
+                                System.out.println("Postponing "+task.id);
 								continue;
 							}
 						}
 						//if there are no conditions before execution
 					} else {
 						task.status = "executed";
-						executed.put(task.id, task);
+                        System.out.println("Executing "+task.id);
+						taskList.put(task.id, task);
 						//save state
-						Collection<Task> fullList = new ArrayList<Task>();
-						fullList.addAll(notExecuted); fullList.addAll(executed.values());
-						cal.tasks = fullList;
+						cal.tasks = taskList.values();
 						try {
 							ser.serialize(cal);
 						} catch (JAXBException | IOException e) {
